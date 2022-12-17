@@ -17,9 +17,15 @@
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header-and-hero.container {
+    background-color: #4A503D;
 }
 
 .section {
+    width: 100%;
     flex: 1;
     justify-content: center;
     align-items: center;
@@ -30,6 +36,7 @@
     justify-content: space-between;
     color: #fbf2db;
     background-color: #4A503D;
+    min-height: 4rem;
 }
 
 .nav {
@@ -43,19 +50,47 @@
     display: flex;
     color: #fbf2db;
     background-color: #4A503D;
+    height: 28rem;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.discription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    justify-content: start;
+    margin-bottom: 3rem;
+}
+
+.button {
+    border: 5px solid #e38f84;
+    background-color: #e38f84;
+    color: white;
+    font-weight: 800;
+    border-radius: 10px;
+    padding: 0.2rem 2rem;
+    margin-top: 1rem;
 }
 
 .pic {
-    background-color: #e38f84;
-    width: 30rem;
+    flex-shrink: 0;
+    background-color: #8d9775;
+    width: 50%;
     height: 15rem;
-    margin: 1rem;
+    
+}
+
+.info-container {
+    background-color: #fbf2db;
 }
 
 .section.info {
     background-color: #fbf2db;
     display: flex;
     flex-direction: column;
+    padding: 0 2rem;
 }
 
 .cards {
@@ -75,7 +110,7 @@
     width: 10rem;
     height: 10rem;
     border: 5px solid #e38f84;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .section.quote {
@@ -83,10 +118,6 @@
 }
 
 .section.action {
-    background-color: #e38f84;
-}
-
-.button {
     background-color: #e38f84;
 }
 
@@ -98,7 +129,31 @@ li {
     display: inline-block;
 }
 
-h1 {
+h1,
+h2,
+.logo {
     font-family: 'Playfair Display', serif;
     color: white;
+    font-weight: 800;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #4A503D;
+    padding: 3rem 0;
+}
+
+@media only screen and (min-width: 1021px) {
+    .section {
+        width: 1020px;
+        margin: 0 auto;
+    }
 }
