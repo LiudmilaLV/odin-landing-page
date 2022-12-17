@@ -7,32 +7,27 @@
 }
 
 .section {
-    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.page {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     text-align: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
-.header-and-hero.container {
+.main {
+    min-height: 20rem;
+}
+
+.section.main {
+    padding: 5rem 0;
+}
+
+.header-and-hero-container {
     background-color: #4A503D;
 }
 
-.section {
-    width: 100%;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-}
-
-.section.header {
-    display: flex;
+.header,
+.footer {
     justify-content: space-between;
     color: #fbf2db;
     background-color: #4A503D;
@@ -46,13 +41,10 @@
     gap: 2rem;
 }
 
-.section.hero {
-    display: flex;
+.hero {
     color: #fbf2db;
     background-color: #4A503D;
-    height: 28rem;
     gap: 2rem;
-    padding: 2rem 0;
 }
 
 .discription {
@@ -79,22 +71,25 @@
     background-color: #8d9775;
     width: 50%;
     height: 15rem;
-    
 }
 
 .info-container {
-    background-color: #fbf2db;
+    background-color: white;
+    
 }
 
 .section.info {
-    background-color: #fbf2db;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 0 2rem;
+    align-items: center;
+    gap: 2rem;
+    width: 60%;
 }
 
 .cards {
     display: flex;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 
@@ -102,7 +97,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -110,19 +104,19 @@
     width: 10rem;
     height: 10rem;
     border: 5px solid #e38f84;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
-.section.quote {
+.quote {
     background-color: #8d9775;
 }
 
-.section.action {
-    background-color: #e38f84;
+.action {
+    background-color: white;
 }
 
-.section.footer {
-    background-color: #4A503D;
+.footer {
+    justify-content: center;
 }
 
 li {
@@ -148,7 +142,7 @@ h1 {
 h2 {
     font-size: 2rem;
     color: #4A503D;
-    padding: 3rem 0;
+    padding-bottom: 2.5rem;
 }
 
 @media only screen and (min-width: 1021px) {
