@@ -1,5 +1,4 @@
 * {
-    font-family: 'Lora', serif;
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
@@ -10,19 +9,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     text-align: center;
 }
 
 .main {
-    min-height: 20rem;
+    min-height: 22rem;
 }
 
 .section.main {
     padding: 5rem 0;
 }
 
-.header-and-hero-container {
+.header-and-hero-container,
+.header,
+.footer-container,
+.footer {
     background-color: #4A503D;
 }
 
@@ -30,7 +31,6 @@
 .footer {
     justify-content: space-between;
     color: #fbf2db;
-    background-color: #4A503D;
     min-height: 4rem;
 }
 
@@ -41,7 +41,8 @@
     gap: 2rem;
 }
 
-.hero {
+.section.hero {
+    display: flex;
     color: #fbf2db;
     background-color: #4A503D;
     gap: 2rem;
@@ -49,6 +50,7 @@
 
 .discription {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
@@ -67,24 +69,16 @@
 }
 
 .pic {
-    flex-shrink: 0;
     background-color: #8d9775;
     width: 50%;
     height: 15rem;
 }
 
-.info-container {
-    background-color: white;
-    
-}
-
 .section.info {
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    width: 60%;
 }
 
 .cards {
@@ -98,6 +92,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #4A503D;
 }
 
 .card-pic {
@@ -107,12 +102,26 @@
     border-radius: 15px;
 }
 
+.quote-container,
 .quote {
-    background-color: #8d9775;
+    background-color: #fbf2db;
 }
 
-.action {
-    background-color: white;
+.section.quote {
+    display: flex;
+    flex-direction: column;
+    color: #4A503D;
+    font-family: 'Lora', serif;
+}
+
+.section.quote > .quote-text {
+    font-size: 2rem;
+    font-style: italic;
+    text-align: start;
+}
+
+.section.quote > .quote-author {
+    align-self: flex-end;
 }
 
 .footer {
@@ -125,23 +134,25 @@ li {
 
 h1,
 h2,
-.logo {
+.logo,
+.quote-author {
     font-family: 'Playfair Display', serif;
-    color: white;
     font-weight: 800;
+    font-size: 1.5rem;
 }
 
 .logo {
-    font-size: 1.5rem;
+    color: white;
 }
 
 h1 {
     font-size: 3rem;
+    color: white;
 }
 
 h2 {
-    font-size: 2rem;
     color: #4A503D;
+    font-size: 2rem;
     padding-bottom: 2.5rem;
 }
 
@@ -149,5 +160,11 @@ h2 {
     .section {
         width: 1020px;
         margin: 0 auto;
+    }
+    .section.info {
+        width: 60%;
+    }
+    .section.quote {
+        width: 50%;
     }
 }
